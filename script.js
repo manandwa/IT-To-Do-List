@@ -5,6 +5,12 @@ function addToDoItem() {
    newToDoItem(itemText, false);
 }
 
+var clearInputButton = document.getElementById("clear-input-button");
+clearInputButton.addEventListener("click", clearInputBox);
+function clearInputBox() {
+    toDoEntryBox.value = ""
+}
+
 var clearButton = document.getElementById("clear-completed-button");
 clearButton.addEventListener("click", clearCompletedToDoItems);
 function clearCompletedToDoItems() {
